@@ -1,0 +1,33 @@
+import type { PaymentMethodId } from "@/lib/payments";
+import type { PricedLine } from "@/lib/pricing";
+import type { StatusId } from "@/lib/status";
+
+export type PublicOrder = {
+  id: string;
+  code: string;
+  storeId: string;
+  storeName: string;
+  storeBranch: string;
+  storeCity: string;
+  storeArea: string;
+  customerName: string;
+  phone: string;
+  city: string;
+  area: string;
+  address: string;
+  notes: string;
+  paymentMethod: PaymentMethodId;
+  paymentLabel: string;
+  items: PricedLine[];
+  subtotal: number;
+  deliveryFee: number;
+  serviceFee: number;
+  total: number;
+  status: StatusId;
+  riderName: string;
+  riderVehicle: string;
+  riderPlate: string;
+  etaMinutes: number;
+  placedAt: number;
+  updatedAt: number;
+};
